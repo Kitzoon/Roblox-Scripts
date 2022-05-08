@@ -6,7 +6,9 @@
 
 
 -- waits for the game to load
-game.Loaded:Wait()
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
 settings {
     toggle = true
